@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Test dillinger"
+date:   2024-12-06 15:31:47 +0700
+categories: test note
+---
+
 # Dillinger
 ## _The Last Markdown Editor, Ever_
 
