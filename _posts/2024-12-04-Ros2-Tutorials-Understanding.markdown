@@ -137,3 +137,14 @@ ros2 topic find <topic_type>  # return list of available topics of a given type
 Services are another method of communication for nodes in the ROS graph. Services are based on a call-and-response model versus the publisher-subscriber model of topics. While topics allow nodes to subscribe to data streams and get continual updates, services only provide data when they are specifically called by a client.
 
 [![Alt text](/assets/images/service_multi_service_client.gif)]({{ site.baseurl }}/assets/images/service_multi_service_client.gif)
+
+#### Command
+
+```shell
+ros2 service list   # list of currently active services
+```
+You will see that almost nodes have the same six services with `parameters` in their names. Nearly every node in ROS 2 has these infrastructure services that parameters are built off of.
+
+```shell
+ros2 service type <service_name>  # describe how the request and response data of a service is structured
+```
