@@ -215,3 +215,15 @@ Actions are built on topics and services. Their functionality is similar to serv
 Actions use a client-server model, similar to the publisher-subscriber model (described in the topics tutorial). An “action client” node sends a goal to an “action server” node that acknowledges the goal and returns a stream of feedback and a result.
 [![Alt text](/assets/images/action_single_action_client.gif)]({{ site.baseurl }}/assets/images/action_single_action_client.gif)
 
+When you launch the `/teleop_turtle` node, you will see the following message in your terminal:
+```
+Use arrow keys to move the turtle.
+Use G|B|V|C|D|E|R|T keys to rotate to absolute orientations. 'F' to cancel a rotation.
+```
+Pay attention to the terminal where the `/turtlesim` node is running. Each time you press one of these keys, you are sending a goal to an action server that is part of `/turtlesim` node.
+The **F** key will cancel a goal mid-execution.
+
+Try hitting **D** key, then immeditly hit **G**, you will see the message : _[WARN] [turtlesim]: Rotation goal received before a previous goal finished. Aborting previous goal_
+This action server chose to abort the first goal because it got a new one. It could have chosen something else, like reject the new goal or execute the second goal after the first one finished. Don’t assume every action server will choose to abort the current goal when it gets a new one.
+
+#### Command
