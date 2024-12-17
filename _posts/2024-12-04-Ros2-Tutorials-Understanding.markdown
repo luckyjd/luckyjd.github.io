@@ -6,8 +6,8 @@ categories: Ros2
 ---
 
 
-# Ros2 Tutorial 1 : Understanding
-## _This tutorial helps you understand how ROS2 works, its components, and provides easy-to-follow examples._
+# ROS2 Tutorial 1 : Understanding
+_This tutorial helps you understand how ROS2 works, its components, and provides easy-to-follow examples._
 
 ## 1. Configuring environment
 
