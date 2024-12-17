@@ -175,3 +175,43 @@ ros2 service call <service_name> <service_type> <arguments>
 ### 2.4 ROS2 Parameters
 
 #### Background
+A parameter is a configuration value of a node. You can think of parameters as node settings. A node can store parameters as integers, floats, booleans, strings, and lists. In ROS 2, each node maintains its own parameters.
+
+#### Command
+
+```shell
+ros2 param list   # return parameters belonging to nodes
+```
+
+```shell
+ros2 param get <node_name> <parameter_name>   # return current value of a parameter
+```
+
+```shell
+ros2 param set <node_name> <parameter_name> <value>  # set value for a parameter, only apply for current session, not permanently
+```
+
+```shell
+ros2 param dump <node_name> # show standard output (stdout) of parameters 
+# can export to file : ros2 param dump <node_name> > <file_name>
+```
+
+```shell
+ros2 param load <node_name> <parameter_file>
+```
+
+```shell
+ros2 run <package_name> <executable_name> --ros-args --params-file <parameter_file>   # load parameter file on node startup
+```
+
+### 2.5 ROS2 Actions
+
+#### Background
+
+Actions are one of the communication types in ROS 2 and are intended for long running tasks. They consist of three parts: a goal, feedback, and a result.
+
+Actions are built on topics and services. Their functionality is similar to services, except actions can be canceled. They also provide steady feedback, as opposed to services which return a single response.
+
+Actions use a client-server model, similar to the publisher-subscriber model (described in the topics tutorial). An “action client” node sends a goal to an “action server” node that acknowledges the goal and returns a stream of feedback and a result.
+[![Alt text](/assets/images/action_single_action_client.gif)]({{ site.baseurl }}/assets/images/action_single_action_client.gif)
+
