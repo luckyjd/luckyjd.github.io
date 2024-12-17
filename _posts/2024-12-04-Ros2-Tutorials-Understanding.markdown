@@ -138,13 +138,40 @@ Services are another method of communication for nodes in the ROS graph. Service
 
 [![Alt text](/assets/images/service_multi_service_client.gif)]({{ site.baseurl }}/assets/images/service_multi_service_client.gif)
 
+Nodes can communicate using services in ROS 2. Unlike a topic - a one way communication pattern where a node publishes information that can be consumed by one or more subscribers - a service is a request/response pattern where a client makes a request to a node providing the service and the service processes the request and generates a response.
+
 #### Command
 
 ```shell
 ros2 service list   # list of currently active services
+ros2 service list -t   # include type of services
 ```
 You will see that almost nodes have the same six services with `parameters` in their names. Nearly every node in ROS 2 has these infrastructure services that parameters are built off of.
 
 ```shell
 ros2 service type <service_name>  # describe how the request and response data of a service is structured
 ```
+
+Each service have only one type. But one type can belong to multi service.
+Service types are defined similarly to topic types, except service types have two parts: one message for the request and another for the response.
+
+```shell
+ros2 service find <type_name>   # return list service of a specific type
+```
+
+```shell
+ros2 interface show <type_name>  # return structure of service type
+```
+
+SERVICE CALL 
+
+`arguments` part is optional
+
+```shell
+ros2 service call <service_name> <service_type> <arguments>
+# Ex : ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"
+```
+
+### 2.4 ROS2 Parameters
+
+#### Background
