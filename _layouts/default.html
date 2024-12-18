@@ -6,6 +6,7 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
@@ -24,8 +25,8 @@
 
       <div id="banner">
         <span id="logo"></span>
-        <a href="{{ site.baseurl }}" class="button fork"><strong>Home</strong></a>
-<!--        <a href="{{ site.github.repository_url }}" class="button fork"><strong>View On GitHub</strong></a>-->
+        <a href="{{ site.baseurl }}/" class="button fork"><strong>Home</strong></a>
+        <a href="{{ site.github.repository_url }}" class="button fork github-button"><strong>View On GitHub</strong></a>
 
         {% if site.show_downloads %}
           <div class="downloads">
