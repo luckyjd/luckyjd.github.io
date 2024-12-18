@@ -59,7 +59,7 @@ pip install mujoco
 pip install pygame
 ```
 
-### Test 
+**Test** 
 
 > Note: activate venv
 
