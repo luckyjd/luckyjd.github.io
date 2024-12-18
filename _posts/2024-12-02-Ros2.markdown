@@ -7,11 +7,12 @@ categories: Ros2
 
 
 # Ros2 
-## _The Robot Operating System_
+**_The Robot Operating System_**
 
 ## Installation
 
-Guide [Ubuntu](https://docs.ros.org/en/rolling/Installation/Ubuntu-Install-Debs.html).
+ROS2 Humble on Ubuntu 22.04
+Guide [Ubuntu](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html).
 
 ### Set locale.
 
@@ -47,20 +48,20 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 ```sh
 sudo apt update
 sudo apt upgrade
-sudo apt install ros-rolling-desktop    # for GUI 
-sudo apt install ros-rolling-ros-base    # for non-GUI 
+sudo apt install ros-humble-desktop    # for GUI 
+sudo apt install ros-humble-ros-base    # for non-GUI 
 ```
 
 ### Set enviroment 
 
 ```sh
-source /opt/ros/rolling/setup.bash # what environment? what does it init?
+source /opt/ros/humble/setup.bash  # set environment variables  
 ```
 
 or setup to ~/.bashrc for anytime open terminal 
 
 ```sh
-echo "source /opt/ros/rolling/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
 
