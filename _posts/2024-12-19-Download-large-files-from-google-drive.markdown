@@ -10,8 +10,10 @@ categories: Anything
 **_Guide to run_**
 **_for ubuntu_**
 
+## Create file 
+
 ```shell
-chmod +x download_files.sh
+nano download_files.sh
 ```
 
 **download_files.sh**
@@ -63,7 +65,14 @@ done
 echo "All downloads completed."
 ```
 
-**Example**
+## Set permission
+
+```shell
+chmod +x download_files.sh
+```
+
+
+## Example
 ```shell
 ./download_files.sh /path/to/save "https://drive.google.com/file/d/FILE_ID1,https://drive.google.com/file/d/FILE_ID2"
 ```
